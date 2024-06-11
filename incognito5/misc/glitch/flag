@@ -1,0 +1,26 @@
+ictf{th1s_1s_1nd33d_M4l1c10us}
+
+Solvers: Sean + Yuval
+
+Description:
+"Found a glitch on youtube!
+
+https://youtu.be/oQZuaI8SxXw"
+
+
+Going to the video, we see a lot of black and white (kinda qr-like) frames.
+
+Sean gave me this writeup from a different ctf:
+https://medium.com/@brutal_panda/youtube-go-brrr-ethiopia-cybershield-showdown-ctf-9e2e006cd9d3
+
+In this writeup, it's the exact same challenge as this one.
+The challenge maker used this tool from github:
+https://github.com/DvorakDwarf/Infinite-Storage-Glitch
+
+To make a video with the flag embeded into it, and then uploaded it to youtube.
+
+Neat, so we download the tool, and just use it,
+And extracting from the video the encoded info, we get a zip archive,
+which then if we unzip, we get a flag.png file.
+
+Opening up the image within an image viewer gives us the flag.

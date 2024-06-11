@@ -1,0 +1,46 @@
+ictf{p1x3L_hUnT3R_My5t3ry}
+
+Solvers: Sean + Yuval
+
+Description:
+"One of our agent was able to get the username "GlitchyBagel42", you know what's next 🤷‍"
+
+It is a twitter username:
+https://twitter.com/GlitchyBagel42
+
+Looking at their bio we see:
+"Always curious.
+I talk about very random ABs2 cGFzdGViaW4uY29tL2h5d1ZyWHFR PkdfidkDpokmJsQ,
+oops, my thoughts jump around a lot, got dyslexia."
+
+"cGFzdGViaW4uY29tL2h5d1ZyWHFR" is a base64 encoded link:
+pastebin.com/hywVrXqQ
+
+Going there, it requires a password.
+Checking out the tweets of this user we see one saying:
+
+"In my world, names aren't just cool, they unlock secrets. Like, literally. 😉"
+
+The twitter username is Pixel Quokka @GlitchyBagel42
+So we try Pixel Quokka as the password for pastebin, and it works.
+
+The pastebin post is a list of a LOT of flags.
+Impossible to know which one is the right one...
+
+However, looking back at the tweets we see a tweet saying:
+"Playing with words tonight -
+
+Among the flags, a single key,
+"Mystery" solves miseries, you'll see.
+In the vast web, it quietly resides,
+Seek its whisper, where truth abides."
+
+So we're looking for a keyword here, "mystery".
+All the flags are in 1337 speak tho, so let's 1337ify this:
+"my5t3ry"
+
+Looking through the flags using ctrl+f in the browser,
+the one and only flag containing "my5t3ry" is the 736th flag:
+ictf{p1x3L_hUnT3R_My5t3ry}
+
+So we try and submit this flag, and it's indeed correct.

@@ -1,0 +1,46 @@
+ictf{ruby_r3g3x_n3w_l1n3_4l3rt}
+
+Description:
+"This guy wants you to guess his favorite programming language,
+but missed setting up the pattern correctly."
+
+Solution:
+The website asks the user to guess which programming languages the dev is fluent in.
+"Hint: I'm more versatile than a Swiss Army knife when it comes to programming!"
+
+There's an input bar where you put your guess and a submit button.
+
+Trying to guess different langs such as python or go will say we're incorrect.
+
+For me, guessing a bunch of programming langs didn't bring me to much at first,
+so I started trying searching up some sort of injection here, like ' or "
+
+when you serach up a single quote it will tell you the following:
+Your guess: Malicious Input Detected! You can't bypass the regex ^[0-9a-z\n ]+$/i hehe
+
+So the backend here checks if our input passes the regexp ^[0-9a-z\n ]+$ which seems somewhat normal to me... I mean, it just allows numbers and alphabet characters, right?
+What could go wrong here?
+
+Well, the regexp will match anything that starts with a LINE of alphanumeric input.
+If we try sending multiple lines via sending a url-encoded newline char, we can inject whatever malicious input we want afterwards.
+
+I will send the following input in url-encoding:
+a\n<%= IO.popen('cat flag.txt').readlines()  %>
+
+url-encoded:
+a%0A%3C%25%3D%20IO%2Epopen%28%27cat%20flag%2Etxt%27%29%2Ereadlines%28%29%20%20%25%3E
+
+Sending this via curl, burp of using a fetch request, we will get the flag, via SSTI.
+
+Resources:
+This blog about bypassing this exact regexp check:
+https://davidhamann.de/2022/05/14/bypassing-regular-expression-checks/
+
+Ruby SSTI RCE:
+https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md#ruby---code-execution
+
+
+Note:
+If you guess Ruby in the input area, it will tell you that you are correct and will give you a fake flag btw.
+I found this out after reading the article and trying to send Ruby as my input, to verify it is indeed Ruby (bc the article talks about this being a problem in Ruby)
+And that's why I specifically used a Ruby SSTI payload, since I assumed that the backend is written in Ruby...

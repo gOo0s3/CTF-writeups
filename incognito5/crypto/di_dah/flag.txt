@@ -1,0 +1,21 @@
+ictf{M0rs3_4nd_D1D@h_Wh1z3r3r}
+
+Description:
+"Beneath flickering lights, echoes play their games,
+In voltage's fluctuations, telegraph's silent claims."
+
+Looking through enc.txt we see a whole bunch of "di"s "dit"s and "dah"s.
+If you read them out it sounds a lot like morse code; dah for a dash and di/dit for a dot.
+
+I wrote a python script that transalted the 'di's and 'dah's to actual morse code with dashes and dots.
+
+[TODO: actually write the script]
+
+I then took the morse code output and pasted it into cyberchef to decode from morse code.
+After doing so we get a string of a bunch of numbers and letters,
+which cyberchef automatically figured out was hex encoding.
+
+Decoding from hex gets the flag:
+
+https://gchq.github.io/CyberChef/#recipe=From_Morse_Code('Space','Line%20feed')From_Hex('None')&input=LS4uLi4gLS0tLS4gLS4uLi4gLi4uLS0gLS0uLi4gLi4uLi0gLS4uLi4gLS4uLi4gLS0uLi4gLS4uLiAuLi4uLSAtLi4gLi4uLS0gLS0tLS0gLS0uLi4gLi4tLS0gLS0uLi4gLi4uLS0gLi4uLS0gLi4uLS0gLi4uLi4gLi4tLiAuLi4tLSAuLi4uLSAtLi4uLiAuIC0uLi4uIC4uLi4tIC4uLi4uIC4uLS4gLi4uLi0gLi4uLi0gLi4uLS0gLi0tLS0gLi4uLi0gLi4uLi0gLi4uLi0gLS0tLS0gLS4uLi4gLS0tLi4gLi4uLi4gLi4tLiAuLi4uLiAtLS4uLiAtLi4uLiAtLS0uLiAuLi4tLSAuLS0tLSAtLS4uLiAuLSAuLi4tLSAuLi4tLSAtLS4uLiAuLi0tLSAuLi4tLSAuLi4tLSAtLS4uLiAuLi0tLSAtLS4uLiAtLi4gLS0tLS0gLi0
+

@@ -1,0 +1,32 @@
+ictf{X0R_Br0ught_Y0u_H3r3?}
+
+Description:
+Delve into binary operations, where math meets magic
+
+Solution:
+"Binary operations" lead me to suspect we're talking about XOR here,
+as it's very common to see in crypto challenges.
+
+I pasted the contents of the given enc.txt into cyberchef:
+https://gchq.github.io/CyberChef/#input=eWN9dntRIFJWUnI5ZWdhZF9QIHVWWDN7Iz90&oeol=CR
+
+and used the XOR filter with the known start of the flag,
+so XORing the encrypted flag with the start of the known flag ("ictf{"):
+
+https://gchq.github.io/CyberChef/#recipe=XOR(%7B'option':'UTF8','string':'ictf%7B'%7D,'Standard',false)To_Hex('Space',0)&input=eWN9dntRIFJWUnI5ZWdhZF9QIHVWWDN7Iz90&oeol=CR
+
+(after XORing I took the hex of the result)
+
+
+As we can see at the start, we get in hex:
+10 00 09 10 00 38 ...
+
+The first 5 hex values here are the start of our key,
+and it seems like it's going to be the first 3 hex values: 10 00 09 repeating,
+as the second half 10 00 are just the start of the same key.
+
+So we try to XOR the original contents of enc.txt with 10 00 09 and we get the flag:
+
+https://gchq.github.io/CyberChef/#recipe=XOR(%7B'option':'Hex','string':'10%2000%2009'%7D,'Standard',false)&input=eWN9dntRIFJWUnI5ZWdhZF9QIHVWWDN7Iz90&oeol=CR
+
+
