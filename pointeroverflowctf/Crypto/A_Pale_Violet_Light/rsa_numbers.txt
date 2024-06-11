@@ -1,0 +1,25 @@
+
+https://www.tausquared.net/pages/ctf/rsa.html
+http://factordb.com/
+
+e = 5039
+
+N = 34034827
+
+C = 933969 15848125 24252056 5387227 5511551 10881790 3267174 14500698 28242580 933969 32093017 18035208 2594090 2594090 9122397 21290815 15930721 4502231 5173234 21290815 23241728 2594090 21290815 18035208 10891227 15930721 202434 202434 21290815 5511551 202434 4502231 5173234 25243036
+
+
+# using factordb on N:
+p = 5807
+q = 5861
+
+phi(n) = (p-1)*(q-1) = 34023160
+
+# d is the modular multiplicative inverse of e mod(phi(n))
+d = 202559
+
+pubic key = (n, e)
+private key = (n, d)
+
+now we all the space spearated numbers in C and decrypt each one,
+using m = c^d mod(n)
