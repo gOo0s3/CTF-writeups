@@ -1,0 +1,44 @@
+spartanCTF{bigdork!}
+
+Description:
+"Look. I forgot the password to my account for the email server. Can you help me figure it out? I do, in fact, have a hashed version of the password (not that you'd be able to do anything with it):
+
+07fc8e7f9f675b4281b1ac40ca187eb5da698024cb6bf893be62a96da33cfad5
+
+Note: submit flag in format spartanCTF{PASSWORD}"
+
+
+We take the password hash and throw it over to hash-identifier:
+
+$ hash-identifier
+   #########################################################################
+   #     __  __                     __           ______    _____           #
+   #    /\ \/\ \                   /\ \         /\__  _\  /\  _ `\         #
+   #    \ \ \_\ \     __      ____ \ \ \___     \/_/\ \/  \ \ \/\ \        #
+   #     \ \  _  \  /'__`\   / ,__\ \ \  _ `\      \ \ \   \ \ \ \ \       #
+   #      \ \ \ \ \/\ \_\ \_/\__, `\ \ \ \ \ \      \_\ \__ \ \ \_\ \      #
+   #       \ \_\ \_\ \___ \_\/\____/  \ \_\ \_\     /\_____\ \ \____/      #
+   #        \/_/\/_/\/__/\/_/\/___/    \/_/\/_/     \/_____/  \/___/  v1.2 #
+   #                                                             By Zion3R #
+   #                                                    www.Blackploit.com #
+   #                                                   Root@Blackploit.com #
+   #########################################################################
+--------------------------------------------------
+ HASH: 07fc8e7f9f675b4281b1ac40ca187eb5da698024cb6bf893be62a96da33cfad5
+
+Possible Hashs:
+[+] SHA-256
+[+] Haval-256
+
+
+
+So this is most likely a sha256 hashed password.
+
+We can try to bruteforce passwords, hashing each one and comparing to our known hash.
+We use john the ripper like so:
+
+$ echo 07fc8e7f9f675b4281b1ac40ca187eb5da698024cb6bf893be62a96da33cfad5 > crack.txt
+$ john --wordlist=/usr/share/wordlists/rockyou.txt --format=raw-sha256 crack.txt
+
+After not very long, it will find the password was "bigdork!".
+We submit the flag as spartanCTF{bigdork!} and get the points :)

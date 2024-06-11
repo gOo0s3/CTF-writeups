@@ -1,0 +1,46 @@
+spartanCTF{th4nk_y0u_m0rpheus_11ec1158}
+
+Description:
+"I found this file on a USB drive that was left by somebody
+after the last club meeting. I'm not at my computer right
+now so I can't open the archive myself. Would you mind
+looking through the archive to figure out what's on it?"
+
+
+Solution:
+Use this python program to unzip all the zip files recursively:
+
+import os
+import zipfile
+
+def extract_zip(zip_file_path, folder_name):
+    # Extract zip file
+    with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
+        zip_ref.extractall(folder_name)
+
+    # Check for zip files inside the extracted files
+    for file in os.listdir(folder_name):
+        if file.endswith(".zip"):
+            # Create new folder with same name as extracted zip file
+            new_folder = os.path.join(folder_name, file[:-4])
+            os.mkdir(new_folder)
+
+            # Extract the next level of zip files
+            zip_path = os.path.join(folder_name, file)
+            extract_zip(zip_path, new_folder)
+
+# Set the path of your first zip file
+root_zip_path = "hole.zip"
+root_folder = "."
+# Extract the root zip file
+extract_zip(root_zip_path, root_folder)
+
+
+Then use this command to cat all the rabbit files to a single txt file:
+
+$ find . -type f -name 'rabbit' -exec cat {} + > concatenated_rabbit_files.txt
+
+
+Then you can search this txt file for the flag:
+
+$ strings concatenated_rabbit_files.txt | grep spartanCTF
