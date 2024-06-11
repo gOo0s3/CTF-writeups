@@ -1,0 +1,17 @@
+osu{cr0pp3d_Future_Candy<3}
+
+Since AoC2023, I remember learning about the aCropalypse vulnerability (CVE-2023-21036),
+which is heavily hinted upon in the description of the challenge:
+
+Here's an old screenshot of chat logs between sahuang and Nathan on hollow's Windows machine,
+but a crucial part of the conversation seems to be _cropped_ out...
+Can you help to recover the flag from the future?
+
+
+so putting the picture into the aCropalypse website: https://acropalypse.app/
+we can recover the full screenshot using a custom resultion  setting of height 1080 by width 1920 (the default resolution for windows computers)
+I downloaded the result of this and saved it as recovered.png in this dir
+
+I unfortunately did not solve this during the ctf time, as I did not solve any of the forensics category...
+Didn't really get to them I suppose.
+Totally could have solved this within the time limit if I just took a look at it tho lol

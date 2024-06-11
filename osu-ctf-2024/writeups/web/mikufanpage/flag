@@ -1,0 +1,18 @@
+osu{miku_miku_miku_miku_miku_miku_miku_miku_miku_miku_miku_miku_miku}
+
+so this challenge has a pretty obvious path traversal vuln
+Going through the source code with ctrl+u you can see the website pulls all images through the /images dir
+but specifies a path GET parameter.
+
+This parameter holds the name of the file you try to pull
+such as miku1.jpg
+
+however, since we have the source code, we see that it validates
+this path parameter by just checking that the path.split(".")[1]
+is png or jpg.
+
+this can be manipulated as such:
+
+path=bullshit.png.whatever/../flag.txt
+
+and this gives out the flag when you visit the page
