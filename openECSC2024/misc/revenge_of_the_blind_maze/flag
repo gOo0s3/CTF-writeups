@@ -1,0 +1,24 @@
+openECSC{flag_inside_the_attachment_yes_we_like_it_ff9677ac}
+
+Description:
+Welcome back to the blind maze,
+this time you'll have a harder time finding the flag, good luck.
+Site: http://blindmazerevenge.challs.open.ecsc2024.it
+
+Attachments:
+capture.pcap
+
+Solution:
+Looking through the pcap file again for the flag in plaintext will not work here,
+what we will see when we search for the word "flag" is that when the winner
+of the maze finished the maze, they got the following string:
+"The flag will appear here after the start of the CTF"
+
+We do know exactly the path the winner of the maze took in order to get to the flag,
+so we can try to redo the exact same path.
+
+I have tried writing a script to do this but it doesn't work yet for some reason....
+so the way I solved the maze for now was literally manually going through the moves...
+
+So........
+#TODO: fix shitty script

@@ -1,0 +1,111 @@
+Information and consent relating to the processing of personal data, art 13 of the GDPR, for members of the openECSC portal
+Before submitting the registration form, you must read this brief information and give your consent to the processing of the data you provide us.
+1. Who is the Data Controller
+The data controller is the National Interuniversity Consortium for Informatics - CINI, with registered office and administrative headquarters in Rome, via Ariosto, 25. The Data Protection Officer for the National Interuniversity Consortium for Informatics - CINI can be reached at the following email address dpo@consorzio-cini.it.
+2. For what purposes we process personal data
+Your personal data will be used exclusively for the purposes of the training portal you join, in particular:
+
+    to update you on new material, competitions or resources available within the portal;
+    to update you on new initiatives organized or supported by the Cybersecurity National Lab;
+    for the conduct of the competition and the awarding of prizes as per the regulations.
+
+Some European countries are interested in using the results achieved by their national team participants in the openECSC competition for the selection of their national team which will participate in the ECSC competition in Turin in October. For these nations it will be possible to optionally indicate the desire to participate in the relevant selection during the registration or on-boarding phase. In this case, the data relating to members who have expressly indicated participation may be transferred to the managers of the organization or body which, for that specific country, will be responsible for training the national team that will represent it.
+3. How long will your data be kept
+Personal data will be retained for no longer than is strictly necessary to pursue the purposes for which they were collected. The data may be stored for archiving, scientific research and statistical purposes with the guarantees set out in the art. 89 GDPR.
+4. What are your rights and who can you contact to assert them
+You can contact the Data Protection Officer (DPO), who CINI has appointed, to assert your rights, as indicated in the articles 15 and following of the GDPR n. 679/2016, including in particular: the right of access to know how your data is processed; to rectify your inaccurate personal data; of cancellation, limitation of processing or opposition; you can revoke the processing based on consent at any time, without this affecting the lawfulness of the processing before your act of revocation; exercise the right to portability of the data provided by you. You will obviously be able to lodge a complaint with a supervisory authority such as the Guarantor for the protection of personal data in case of violation of the principles of lawfulness of the processing.
+Information pursuant to the "European Regulation 2016/679 relating to the protection of natural persons with regard to the Processing of Personal Data, as well as the free movement of such data" (GDPR).
+
+The National Interuniversity Consortium for Informatics - CINI (Consorzio Interuniversitario Nazionale per l'Informatica) - as "Data Controller" of the processing, pursuant to Article 13 and Article 14 of the GDPR guarantees that the processing of personal data of those who interact with the Portal's web services, accessible electronically from the address open.ecsc2024.it, complies with what required by the relevant legislation, and specifies that this information is provided exclusively for the website of the openECSC2024 of the Cybersecurity National Lab and not for other external websites that may be reachable by the user via links on the openECSC2024 platform.
+1. Purpose of data processing
+
+The data collected is processed exclusively for the following purposes:
+
+    carry out the provision of services requested by users;
+    provide support to users;
+    carry out statistical analyses, for the sole purpose of improving the offer of services.
+
+2. Data processing methods
+
+The processing will be carried out both manually and with the aid of electronic or automated means, and include, in compliance with the limits and conditions set by the GDPR, all operations of collection, recording, organisation, conservation, consultation, processing, modification, selection, extraction, comparison, use, interconnection, blocking, communication, cancellation and destruction.
+3. Data controller
+
+The data controller is the National Interuniversity Consortium for Informatics - CINI, with registered and administrative headquarters in Rome, via Ariosto, 25.
+4. Data Protection Officer
+
+The Data Protection Officer for the National Interuniversity Consortium for Informatics - CINI is Dr. Fabio De Rosa: e-mail dpo@consorzio-cini.it
+5. Place of data processing
+
+The processing relating to the portal services takes place mainly at the offices of the Consortium or decentralized administrative structures connected to it.
+
+They are carried out by personnel identified and expressly appointed according to the specific purposes of the services requested and subscribed to.
+
+For the processing in question, the Consortium can avail itself of the help of external companies, consultants, consortia, software and service providers who acquire the status of Data Controller processing of the data (Processor), within the scope of the intended purposes and in such a way as to guarantee maximum security and confidentiality of the data.
+6. Transfer of data abroad
+
+The data collected may be stored on third-party platforms, located in Europe, which expressly comply with the GDPR legislation
+7. Communication and dissemination of data
+
+The data collected will not be disclosed or communicated to third parties, except in the cases provided for by law and, in any case, in the manner permitted by it.
+
+The data may be brought to the attention of the Managers (third parties) or those in charge of processing, within the scope of their respective functions and in compliance with the instructions received, only to achieve the specific purposes indicated in this Policy.
+8. Obligatory or not to provide data
+
+The user is free to provide personal data contained in the forms on the CINI website or otherwise indicated during contacts with CINI to request the sending of informative material, other communications or to access specific services. The insertion of data in some fields is mandatory and failure to provide them will make it impossible to send the form itself and in general to start any relationship.
+9. Mandatory consent
+
+Providing consent to data processing by means of a specific tick is optional, but essential to proceed with sending the form, to complete registration on the website and to allow us to send dedicated offers, newsletters and communications relating to you.
+10. Conservation period
+
+The data collected will be stored for a period of time not exceeding the achievement of the purposes for which they are processed ("principle of limitation of conservation", art.5, GDPR) or based on the deadlines established by law. The verification of the obsolescence of the data stored in relation to the purposes for which they were collected is carried out periodically.
+11. Rights of the interested party
+
+In relation to such data, the user can exercise the rights provided in general by the art. 11 and 12 of the GDPR and precisely the right to access (art. 15), right to cancellation (art. 17), right to limit processing (art. 18), and right to data portability (art. 20).
+
+In practice, the interested party always has the right to request the Data Controller by sending an email to the address ciniroma@consorzio-cini.it, access to your data, rectification or cancellation of the same, the limitation of processing or the possibility to oppose the processing, to request data portability, to revoke consent to processing by asserting these and the other rights provided by the GDPR via simple communication to the Data Controller. The interested party can also lodge a complaint with a supervisory authority.
+12. Use of Cookies
+
+Cookies are small text files sent to the user by the website visited. They are stored on your computer's hard disk, thus allowing the website to recognize them users and store certain information about them, in order to enable or improve the service offered. There are different types of cookies. Some are necessary to be able to navigate the Site, others have different purposes such as guaranteeing internal security, administering the system, carrying out statistical analyses, understanding which sections of the Site are are of most interest to users or offer a personalized visit to the Site. The Site uses technical and non-profiling cookies. The foregoing refers to both the computer of the user and any other device that the user can use to connect to the Site.
+
+Technical cookies
+
+Technical cookies are those used for the sole purpose of transmitting a communication over an electronic communications network, or to the extent strictly necessary for provider of an information society service explicitly requested by the subscriber or user to provide this service. They are not used for further purposes and are normally installed directly by the owner or manager of the website. They can be divided into navigation or session cookies, which guarantee normal navigation and use of the website (allowing, for example, to make a purchase or authenticate to access reserved areas); analytics cookies, assimilated to technical cookies where used directly from the site manager to collect information, in aggregate form, on the number of users and how they visit the site itself; functionality cookies, which allow the user can navigate according to a series of selected criteria (for example, the language, the products selected for purchase) in order to improve the service provided to the user.
+
+Disabling cookies could limit your ability to use the Site and prevent you from fully benefiting from the features and services on the Site. To decide which accept and which ones to reject, a description of the cookies used on the Site is illustrated below.
+Types of cookies used
+
+First party cookies:
+
+First-party cookies (i.e. cookies that belong to the publisher's site that created them) are set by the website visited by the user, whose address appears in the window URL. The use of these cookies allows us to make the site work efficiently and to track visitor behavior patterns. Third party cookies: Third party cookies are set by a domain different from the one visited by the user. If a user visits a site and a different company sends the information using that site, we are in the presence of cookies third parts.
+
+Session cookies:
+
+The so-called 'session cookies' are stored temporarily and are deleted when the user closes the browser. If the user registers on the Site, they can use cookies that they collect personal data in order to identify the user on subsequent visits and to facilitate access - login to the Site (for example by keeping the user's username and password) and navigation on the same. Furthermore C.I.N.I. uses cookies for system administration purposes. The Site may contain links to other sites. C.I.N.I. has no access or control over cookies, web bacon and other tracking technologies used on third-party sites that the user can access from the Site, on availability, on any content and material that is published or obtained through such sites and on the related methods of processing personal data; C.I.N.I. in this regard, considering the amount of such third-party sites, declines expressly any related liability. The user should check the privacy policy of third party sites accessed from the Site to find out the conditions applicable to the processing of personal data as the Privacy Policy of C.I.N.I. applies only to the Site as defined above.
+
+Persistent cookies:
+
+Persistent cookies are stored on your device between browser sessions, allowing you to remember your preferences or actions on a site. They can be used for different purposes, for example to remember preferences and choices when using the Site.
+
+Essential cookies:
+
+These cookies are strictly necessary for the functioning of the Site. Without the use of these cookies some parts of the Site would not function. They include, for example, cookies that they allow access to protected areas of the Site. These cookies do not collect information for marketing purposes and cannot be deactivated.
+
+Functional cookies:
+
+These cookies are used to recognize a user who returns to visit the Site. They allow you to personalize the contents and remember your preferences (for example, the selected language or the region). These cookies do not collect information that can identify the user. All information collected is anonymous.
+
+Third party cookies
+
+By visiting the Site, the user may also receive cookies on their device from sites managed by other organizations ("third party" cookies): this happens because on the Site they can be present elements such as, for example, images, maps, specific links to web pages of sites or web services.
+
+These cookies can be sent to the user's browser by third-party companies directly from their websites which can be accessed by browsing the Site.
+
+For the purposes of information transparency, below is a list of third-party services present on the site, their purposes and links to the information pages of the various services:
+Service
+	Purpose
+fontawesome
+	On some pages and paragraphs there may be icons used and coming from the fontawesome service. For informaiton consult the privacy policy https://fontawesome.com/privacy
+
+How to change cookie settings
+
+Most browsers automatically accept cookies, but the user can usually change the settings to disable this function. It is possible to block all types of cookies, or accept to receive only some and disable others. The "Options" or "Preferences" section in the browser menu allows you to avoid receiving cookies and other user tracking technologies, and how to obtain notification from your browser of the activation of these technologies. Alternatively, you can also consult the "Help" section of the toolbar of the tools present in most browsers. 

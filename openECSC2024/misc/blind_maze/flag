@@ -1,0 +1,46 @@
+openECSC{i_found_a_map_e1871a60}
+
+Description:
+Welcome to the blind maze, you move without knowing the outcome and maybe you will reach the end, good luck.
+
+A previous winner left us a strange file. Maybe it will help you.
+
+Site: http://blindmaze.challs.open.ecsc2024.it
+
+Attachments:
+capture.pcap
+
+Solution:
+I went to website and saw that it's behavior is not very predictable, so I gave up on trying to solve the challenge from there.
+Theoretically, however, I wonder if it's solveable using some sort of path finding algorithm to solve this :thinkage:
+
+Anyways, opening up the pcap file within wireshark, I look at the protocols being used and I see a lot of HTTP (ofc)
+as this is the traffic passed when the winner of the challenge solved it.
+
+So I suspected that if it's using HTTP and not HTTPS then the flag should just be in the packets in clear text.
+
+I used ctrl+f and searched for the string "openECSC" within the packet bytes, and indeed came upon a packet that contained those bytes.
+Following the HTTP stream looks like so:
+
+GET /maze?direction=right HTTP/1.1
+Host: localhost:5000
+User-Agent: python-requests/2.25.1
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Cookie: session=EL-aophgdayjVp_mL9SPjoLXlxMIwE_lXR7AunrEHDY
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.0.2 Python/3.10.12
+Date: Fri, 12 Apr 2024 13:08:19 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 50
+Vary: Cookie
+Set-Cookie: session=EL-aophgdayjVp_mL9SPjoLXlxMIwE_lXR7AunrEHDY; Expires=Mon, 13 May 2024 13:08:19 GMT; HttpOnly; Path=/
+Connection: close
+
+Here is the FLAG: openECSC{i_found_a_map_e1871a60}
+
+
+I thought to myself that this may be a dummy flag, but after looking for more occurences of this string in packets, I saw none...
+So trying to submit the flag, it worked :D
