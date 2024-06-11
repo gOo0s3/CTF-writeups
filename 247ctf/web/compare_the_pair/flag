@@ -1,0 +1,49 @@
+247CTF{76fbce3909b3129536bb396fea3a9879}
+
+Description: 
+"Can you identify a way to bypass our login logic?
+MD5 is supposed to be a one-way function right?"
+
+To the challenge, the challenge auther attached a link to a helpful video:
+https://youtube.com/watch?v=-1kftH6t5VA
+
+The video talks about php type juggling.
+
+In php, there are two main comparison modes; loose (==) and strict (===).
+Strict comparison is pretty much what you'd expect would happen when you compare something with == in other languages,
+like python for example.
+Loose comparisons however, are a bit wonky but they're suppose to make life easier for devs sometimes.
+
+The php documentation explains exactly how comparisons work in php:
+https://www.php.net/manual/en/types.comparisons.php
+
+when we open up the link to the challenge we get a webpage with php code:
+
+<?php
+  require_once('flag.php');
+  $password_hash = "0e902564435691274142490923013038";
+  $salt = "f789bbc328a3d1a3";
+  if(isset($_GET['password']) && md5($salt . $_GET['password']) == $password_hash){
+    echo $flag;
+  }
+  echo highlight_file(__FILE__, true);
+?>
+
+
+so the code checks if there's a get parameter called password with a value that when hashed with the salt is equal to the password hash
+with a loose comparison, we echo the flag from the flag.php file.
+So we either need to know the password in order to do this,
+or just make sure that the output of the md5 function will be loosely equal to that password hash in php.
+
+That password hash is a very suspicious looking hash.
+It looks like a decimal literal for scientific notation in php:
+https://www.php.net/manual/en/language.types.float.php
+
+If it were a number, it would be equal to the number 0.
+
+So if we would find some sort of password that would make the md5 hash together with the salt equal to a hash
+that looks like 0 in scientific notation (meaning that it starts with 0e and then is followed by just digits between 0 and 9),
+the loose comparison will return true ("0e123" == "0e321" is true).
+
+
+[TODO: Finish this writeup]

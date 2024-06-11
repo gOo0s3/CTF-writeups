@@ -1,0 +1,14 @@
+247CTF{c69287be15653ac9ab47dcd3f2fcd8fa}
+
+classic vim escape into a shell.
+
+spwanned a shell using the following command:
+
+:!/bin/sh
+
+threw an ls -la
+discovered an executable file called "run_for_flag".
+naturally ran it.
+
+it printed the flag.
+neat!
