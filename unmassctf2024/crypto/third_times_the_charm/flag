@@ -1,0 +1,11 @@
+UMASS{sunz1_su@nj1ng}
+
+Description:
+This didn't work the first two times.
+
+Solution:
+Classic Hastad's broadcast attack on RSA using the Chinese Remainder Theorem.
+Solve script from:
+https://docs.xanhacks.xyz/crypto/rsa/08-hastad-broadcast-attack/
+
+

@@ -1,0 +1,44 @@
+UMASS{us1ng_4_tcp_t1me0ut_t0_d3t3ct_ftp_l0l}
+
+Description:
+I've created a HTTP server that serves not just HTTP but
+also a few other protocols. Can you find the flag?
+http://polygot.ctf.umasscybersec.org/
+
+Solution:
+We go to the website link, and see this text:
+
+
+Hello! Welcome to my website!
+
+I've created a basic HTTP server in Go.
+Isn't that cool? But that is not just just all,
+my HTTP server is more than just a HTTP server.
+It's a polyglot so to say! See if you can find the secrets beneath it.
+I will say that when it is an option, I tend to prefer to
+implement things passively >.<
+
+- haylin
+
+
+So we _go_ ahead and check for other protocols, such as FTP for example:
+
+$ nc polygot.ctf.umasscybersec.org 80
+220 Welcome to the Go FTP Server
+
+There's an FTP server served on port 80 too.
+So we can go ahead and connect to haylin's account with (trying) password "anonymous":
+
+sudo ftp ftp://haylin:anonymous@polygot.ctf.umasscybersec.org:80
+
+We get all the files from the FTP server that we can find (I put all of them in the "files" directory).
+One of those files is an ssh private key! bingo B-)
+
+$ ssh haylin@polygot.ctf.umasscybersec.org -i id_ed25519 -p 80
+You found my SSH server! Welcome!
+SSH Key Used: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINVBSiDCCv2zW3hYOnAQs7sze1rV/nLRvTcJ71Ivy5Vt
+
+Oh! Hey Haylin, here's the key UMASS{us1ng_4_tcp_t1me0ut_t0_d3t3ct_ftp_l0l}
+Connection to polygot.ctf.umasscybersec.org closed.
+
+And there we go
