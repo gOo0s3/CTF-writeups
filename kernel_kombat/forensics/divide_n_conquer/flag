@@ -1,0 +1,11 @@
+kernelkombat{EWWBROTHERWHATSTHAT69034}
+
+Solution:
+Use cyberchef to extract the second gif that binwalk detected but for some reason did not extarct (?)
+Split it into frames
+Googlge "6 color ciphertext"
+come across this writeup:
+https://h1t3ndr4.medium.com/national-techfest-gravithon-ctf-2021-write-up-c09aa6cfa276
+Find some online Hexahue Ciphertext decoder
+Decode message to be EWWBROTHERWHATSTHAT69034
+wrap it with the flag format and submit

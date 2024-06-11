@@ -1,0 +1,9 @@
+kernelkombat{you_really_come_a_long_way_cbwotpa}
+
+Solution:
+https://dtmf.netlify.app/
+
+cipher identify with dcode.fr and go to:
+https://www.dcode.fr/multitap-abc-cipher
+
+(you have to split the DTMF decoding by the * and replace them with spaces. the output of the multitap-abc-cipher should then be all lowercase letters with _ instead of spaces)

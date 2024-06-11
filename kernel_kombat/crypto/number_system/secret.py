@@ -1,0 +1,1 @@
+FLAG = "Kernelkombat{testing}"
