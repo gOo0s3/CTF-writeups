@@ -1,0 +1,16 @@
+flag{29070b0688f398587d41041f4b25d8a3}
+
+Description:
+I read online it's bad to re-use the prime numbers in RSA. So, I made this server that randomly generates them for me. 
+
+Solution:
+I am pretty sure my solution was not intended but here it is anyway;
+
+In the source code for the server we see the public exponent is a randomly generated integer between 500 and 1000.
+We can easily find this by bruteforce given N and the first char of the encrypted array for the flag chars.
+[See my script's beginning for calculating e]
+
+After figuring out e, we know the flag characters are gonna be either lowercase letters, digits, or curly braces.
+So that's our character set, which is again easy enough to bruteforce using our known N and e.
+
+We just go character by character and bruteforce it like in the script.

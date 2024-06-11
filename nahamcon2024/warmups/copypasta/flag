@@ -1,0 +1,5 @@
+flag{1f68e019b29650f6e8ea15a7808f76fd}
+
+Output the nc connection's output to a file called out.
+The connection is sending carriage return characters, so saving the output to a file
+gives us the ability to read the flag that was being hidden via these carriage returns

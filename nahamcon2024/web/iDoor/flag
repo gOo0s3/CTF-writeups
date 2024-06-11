@@ -1,0 +1,17 @@
+
+flag{770a058a80a9bca0a87c3e2ebe1ee9b2}
+
+
+http://challenge.nahamcon.com:31646/5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9
+
+
+Description:
+It's Apple's latest innovation, the "iDoor!" ... well, it is basically the Ring Doorbell camera, but the iDoor offers a web-based browser to monitor your camera, and super secure using ultimate cryptography with even SHA256 hashing algorithms to protect customers! Don't even think about snooping on other people's cameras!!
+
+Press the Start button on the top-right to begin this challenge.
+
+
+Solution:
+The client id you start with is 11.
+Looking at the url we see a sha256 hash of 11.
+We go instead to the hash of 0 and we get the flag.

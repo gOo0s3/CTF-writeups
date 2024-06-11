@@ -1,0 +1,7 @@
+flag{87b9eb9a4894bcf8a1a95a20e33f11f7}
+
+Since e is just 3 and all the numbers are so small in the output ciphertext,
+we can just go ahead and take the cube root of each of the numbers (rounded up),
+and then take the ord of the answer to get the char.
+
+I wrote a solve script that does this

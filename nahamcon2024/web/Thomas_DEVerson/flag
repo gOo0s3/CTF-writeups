@@ -1,0 +1,6 @@
+flag{f69f2c087b291b9da9c9fe9219ee130f}
+
+
+curl 'http://challenge.nahamcon.com:32185/messages' -H 'Cookie: session=eyJuYW1lIjoiQnVyciJ9.ZlCNUA.v1cSxxRi73k62CP8Stzg2ovJNm0'
+
+[TODO: Write the solution]

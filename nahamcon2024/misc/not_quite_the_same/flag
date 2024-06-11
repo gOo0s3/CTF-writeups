@@ -1,0 +1,6 @@
+flag{0800fc577294c34e0b28ad2839435945}
+
+https://github.com/corkami/collisions/tree/master/examples
+
+I was looking up ways to get md5 collisions with 2 png pictures when I found this tool on github with examples.
+In the examples there were already a bunch of collisions with md5 so I just used the first one lol
