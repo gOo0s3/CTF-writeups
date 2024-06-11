@@ -1,0 +1,20 @@
+description:
+Sam has gotten wise to all the people who wrote their own forms to get the password.
+Rather than actually learn the password, he decided to make his email program a little more secure.
+
+Right, so this challenge is a little bit weird.
+For some reason, the solution is exactly the same as the previous challenge.
+
+the only difference between these challenges that I noticed was that
+this time all the requests were done on the same page..?
+
+it seemed to have presented the output on the current page
+with all the HTS css, html, etc.
+
+anyways yeah so just open the website up in burpsuite,
+intercept the post request going out after you press the button,
+modify the to parameter to your own mail and send out the request,
+recieve a mail telling you the password.
+
+password:
+aa00ad92

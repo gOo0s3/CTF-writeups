@@ -1,0 +1,33 @@
+e436ece1
+
+description:
+This time Sam hardcoded the password into the script.
+However, the password is long and complex, and Sam is often forgetful.
+So he wrote a script that would email his password to him automatically in case he forgot.
+Here is the script:
+
+and here there's a button that says "Send password to Sam"
+
+
+right, so if we look into the network tab after pressing this send password to sam button
+or just look at the request going through using burpsuite,
+we can see that we send out an HTTP POST request,
+and within the request data we got a parameter called to.
+
+it's assigned this value:
+to=sam%40hackthissite.org
+
+so the post request is telling the backend which email address to send out the "i forgot my password" mail to.
+So we can just put our own mail address in there using burpsuite.
+
+If we modify the to parameter to be our own email address which we registered with into HTS,
+we get the following mail from sam@hackthissite.org:
+
+From: sam@hackthissire.org
+Title: Your password reminder
+
+Sam,
+Here is the password: 'e436ece1'.
+
+
+So we got Sam's password, which we can use to pass this level.

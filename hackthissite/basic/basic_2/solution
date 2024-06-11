@@ -1,0 +1,11 @@
+description:
+Network Security Sam set up a password protection script.
+He made it load the real password from an unencrypted text file and compare it to the password the user enters.
+However, he neglected to upload the password file...
+
+
+so there's no password file, right?
+Does this mean the password that would get accepted will literally just be an empty string?
+I mean, if it doesn't exist, then surely an empty password would be equal to the content's of the file lol
+
+and if you try this out it works...

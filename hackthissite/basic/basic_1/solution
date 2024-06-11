@@ -1,0 +1,15 @@
+password: f96e6cc6
+
+we get a page that asks us for a password.
+But we don't know any passwords.
+
+So we go take a look at the source code with ctrl+u
+we get kinda bombarded with a lot of html,
+so we use ctrl+f to search for the word 'password'
+to see stuff related to the password.
+
+within the html, we find this comment:
+<!-- the first few levels are extremely easy: password is f96e6cc6 -->
+
+and that's how we get the password.
+we enter it into the page, and it tells us we solved the challenge :)

@@ -1,0 +1,44 @@
+description:
+This time Network Security Sam remembered to upload the password file,
+but there were deeper problems than that.
+
+
+alright so now Sam did upload the password file.
+Good job Sam, getting better now.
+
+Alright, so now how do we get this pesky password?
+well, we try something like 123456789 first just to kinda see what happens
+
+we are of course led to an error page, meaning this password is wrong.
+kinda expected.
+
+Now, we could go on about trying different obvious passwords with a bruteforce attack,
+but we're smarter than that B)
+
+We check out the source code again just to take a look
+perhaps any comments in there may help us out?
+
+looking through, there's nothing interesting in there.
+
+Alright, so we check out the requests going on using dev tools network tab
+or by opening this site in burpsuite.
+
+we see that within our HTTP POST request, where we send to the server hosting this password checking a password,
+we also pass another parameter to it:
+
+file: "password.php"
+password: "123456789"
+
+
+so we got the name of the password file Sam has uploaded.
+We can try to see if we can access this file by adding /password.php at the end of our current url for this page.
+
+we see that we get to a page displaying this text:
+5f103a97
+
+which sure does look like a password to me!
+we try it out...
+and it works!
+
+
+password: 5f103a97

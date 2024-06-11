@@ -1,0 +1,76 @@
+description:
+Network Security Sam has encrypted his password.
+The encryption system is publically available and can be accessed with this form:
+
+"Please enter a string to have it encrypted"
+(textbox)
+
+(button that says "encrypt")
+
+You have recovered his encrypted password. It is:
+19;44hj<
+
+Decrypt the password and enter it below to advance to the next level.
+
+and then the usual password textbox with the submit button.
+
+
+Right, so we'll need to reverse engineer a cipher here without really knowing anything about it.
+If you try to find anything about the encryption on the client side you get nothing from inspecting the source code...
+no helpful files, but it's kinda obvious this type of thing would be done on the backend.
+
+The only thing we're allowed to do is to test different inputs and see what we get out, so we should be able to figure out
+the encryption method based on our output since we can control the input and try to analyze what happened to it.
+
+I started out simple by trying out a test string like "abc123". This is the encrypted string I got: ace468
+so the first char, 'a', stayed the same, b turned into a c, c got turned into e, and the numbers are now different.
+interesting.
+This cannot be some sort of classic caeser cipher since the a got mapped to itself, so it must be some sort of other swap cipher
+is what I thought. But I did wonder since numbers worked, would special chars also work? could this be something else?
+trying the string "$#%^&*-+_" we get: "$$'a*/32g"
+this is very suspicious if they made a perticular swap cipher including swaps for all special symbols like that and numbers too.
+So it must be something else..
+
+alright, so going back to my test string, I do get curious looking at how I did get a rising sequence of numbers at the end when I also had a rising sequence of numbers in my input.
+generally the letters did the same.
+it seemed like the jumps in each sequence was 1 more than my input.
+i tried inputing something that's just the same character repeated a bunch of times to see what happens:
+"aaaaaaaa" got me this output: "abcdefgh"
+AHA! of course, it makes a lot of sense now.
+
+if I had to make my own function that matches all the behavior I've seen this encryption method does, I'd write this:
+
+def encrypt(text):
+	encrypted = ""
+	for index, char in enumerate(text):
+		encrypted += chr(ord(char)+index)
+	return encrypted
+
+
+what happens in the encryption is that we add the index of each character of the string we're encrypted to the ord of the char
+(in ASCII) and then the new encrypted char would be the ASCII character of this sum.
+So for something like "aaa" we would break this down into chars, first char has index 0, so the sum would just be the same as the ord of the char,
+so always the first character would stay the same, which is something we saw happening with all our inputs.
+the second char has index 1, and indeed ASCII is desgined in a way that the letters of the english alphabet all have consequetive orders
+according to their place in the english elphabet.
+so 1 more than 'a' in ASCII is 'b', and 2 more than 'a' would be 'c'.
+so out encrypted "aaa" would become "abc"
+if we'd test any special chars this would still work too, because we still get printable ASCII characters kinda close to these orders of chars.
+
+anyways, so to decrypt this, we can do the exact thing in reverse;
+instead of adding the index to the character of a string, we'll subtract it:
+
+
+def decrypt(encrypted):
+	decrypted = ""
+	for index, char in enumerate(text):
+		decrypted += chr(ord(char)-index)
+	return decrypted
+
+
+if we run this in python on the given encrypted password we get this output: 18910cd5
+which if we also test in the website's encryption we indeed get back 19;44hj< as expected.
+so 18910cd5 is the correct password
+
+password:
+18910cd5
