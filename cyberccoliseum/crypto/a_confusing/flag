@@ -1,0 +1,6 @@
+CODEBY{D1D_Y0U_R3C0GN1Z3_M0RS3_C0D3?}
+
+use python to extract any char that is not "." "-" or " ".
+Decode the output using cyberchef:
+https://gchq.github.io/CyberChef/#recipe=From_Morse_Code('Space','Line%20feed')&input=LS4tLiAtLS0gLS4uIC4gLS4uLiAtLi0tIC0uLiAuLS0tLSAtLi4gLi4tLS4tIC0uLS0gLS0tLS0gLi4tIC4uLS0uLSAuLS4gLi4uLS0gLS4tLiAtLS0tLSAtLS4gLS4gLi0tLS0gLS0uLiAuLi4tLSAuLi0tLi0gLS0gLS0tLS0gLi0uIC4uLiAuLi4tLSAuLi0tLi0gLS4tLiAtLS0tLSAtLi4gLi4uLS0gLi4tLS4u&oenc=65001
+(and add curly braces back)

